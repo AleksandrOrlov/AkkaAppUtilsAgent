@@ -52,6 +52,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actors\ExternalRequestHandler.cs" />
+    <Compile Include="Attributes\ExternalCommandAttribute.cs" />
+    <Compile Include="Commands\BaseExternalCommand.cs" />
+    <Compile Include="Commands\ExternalRequest.cs" />
+    <Compile Include="Dto\Arguments.cs" />
+    <Compile Include="Dto\ExternalCommandItem.cs" />
+    <Compile Include="IExternalCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,10 +67,7 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Actors\" />
-    <Folder Include="Commands\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
