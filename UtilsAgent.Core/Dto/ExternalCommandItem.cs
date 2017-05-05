@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Akka.Actor;
+using UtilsAgent.Core.Commands;
 
 namespace UtilsAgent.Core.Dto
 {
-    internal class ExternalCommandItem
+    public class ExternalCommandItem
     {
         public string CommandText { get; set; }
 
-        public Type ActorType { get; set; }
+        public ActorPath ActorPath { get; set; }
 
-        public Type CommandType { get; set; }
+        public Func<ExternalRequest, BaseExternalCommand> CreateInstance { get; set; }
     }
 }

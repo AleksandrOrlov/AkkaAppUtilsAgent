@@ -77,13 +77,16 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="MainTest.cs" />
+    <Compile Include="BaseTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ExternalCommandTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -99,6 +102,10 @@
     <ProjectReference Include="..\UtilsAgent.Core\UtilsAgent.Core.csproj">
       <Project>{1a3ceed1-d5a7-41a2-8d8a-5ae952677839}</Project>
       <Name>UtilsAgent.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UtilsAgent.Services\UtilsAgent.Services.csproj">
+      <Project>{5530130d-185b-4ff5-9151-1e73447d6e08}</Project>
+      <Name>UtilsAgent.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\UtilsAgent\UtilsAgent.csproj">
       <Project>{e23ddd01-c629-42d8-803b-d21c962eb9f4}</Project>

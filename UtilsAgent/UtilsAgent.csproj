@@ -52,8 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompanyCloning\TestMsgActor.cs" />
-    <Compile Include="ExternalCommands\CloneCompany.cs" />
+    <Compile Include="Actors\ExternalRequestHandler.cs" />
+    <Compile Include="ExternalCommands\ExternalCloneCompany.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,8 +65,13 @@
       <Project>{1a3ceed1-d5a7-41a2-8d8a-5ae952677839}</Project>
       <Name>UtilsAgent.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UtilsAgent.Services\UtilsAgent.Services.csproj">
+      <Project>{5530130d-185b-4ff5-9151-1e73447d6e08}</Project>
+      <Name>UtilsAgent.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="CompanyCloning\Actors\" />
     <Folder Include="CompanyCloning\Commands\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,11 +5,17 @@ namespace UtilsAgent.Core.Commands
 {
     public class ExternalRequest
     {
-        public string Command { get;}
+        public string Command { get; }
 
-        public IEnumerable<Arguments> Args { get; }
+        public IReadOnlyCollection<Argument> Args { get; }
 
-        public ExternalRequest(string command, IEnumerable<Arguments> args)
+        public ExternalRequest(ExternalRequestData data)
+        {
+            Command = data.Command;
+            Args = data.Args;
+        }
+
+        public ExternalRequest(string command, IReadOnlyCollection<Argument> args)
         {
             Command = command;
             Args = args;
